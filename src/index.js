@@ -1,12 +1,12 @@
 import React from "react";
-import ReactDom from  'react-dom/client'
+import ReactDom from "react-dom/client";
 
-import Toplearn from "./Toplearn";
+import App from "./App";
 
-const root = ReactDom.createRoot(document.getElementById('root'))
+const root = ReactDom.createRoot(document.getElementById("root"));
 
 root.render(
-    <React.StrictMode>
-        <Toplearn/>
-    </React.StrictMode>
-)
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
