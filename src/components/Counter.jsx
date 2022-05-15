@@ -1,27 +1,30 @@
 import {Component} from "react";
 
 
-// const Counter = () => {
-//     return (
-//         <div>
-//             <p>
-//                 شمارنده :    {Math.floor(Math.random() * 1000)}
-//             </p>
-//         </div>
-//     )
-// }
-
-class Counter extends Component {
-    render() {
-        return(
-                     <div>
-             <p>
-                 شمارنده :    {Math.floor(Math.random() * 1000)}
+const Counter = (props) => {
+    const {count} = props
+    return (
+        <div>
+            <p>
+                شمارنده :    {count}
             </p>
-         </div>
-        )
-    }
+        </div>
+    )
 }
+
+// class Counter extends Component {
+//     render() {
+        
+//         const {count} = this.props
+//         return(
+//                      <div>
+//              <p>
+//                  شمارنده :    {count}
+//             </p>
+//          </div>
+//         )
+//     }
+// }
 
 
 export default Counter
