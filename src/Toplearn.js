@@ -5,7 +5,8 @@ const Toplearn = () => {
     return (
         <div className="Toplearn">
             <h1>شمارنده من</h1>
-            <Counter/>
+            <br/>
+            <Counter count={3}/>
         </div>
     )
 }
