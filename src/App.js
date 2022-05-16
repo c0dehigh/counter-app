@@ -1,19 +1,30 @@
 import { Component } from "react";
 import { useState } from "react";
+import Counter from "./components/Counter";
 
-
+import "./App.css";
 
 const App = () => {
-  const [count,setCount] = useState(5)
+  const [count, setCount] = useState(5);
 
-  
+  const increaseCount = () => {
+    setCount(count + 1);
+  };
+
+  const decreaseCount = () => {
+    setCount(count - 1);
+  };
+
+  const resetCount = () => {
+    setCount(0);
+  };
+
   return (
-    <div>
+    <div className="App">
       <header>
-        <h1>شمارنده من</h1>
+        <h1>Counter</h1>
       </header>
-      <p>{count}</p>
-      
+      <Counter />
     </div>
   );
 };
