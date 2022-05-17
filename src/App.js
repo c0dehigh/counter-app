@@ -2,7 +2,11 @@ import { Component } from "react";
 import { useState } from "react";
 import Counter from "./components/Counter";
 
-import "./App.css";
+// import "./App.css";
+
+// Added css module
+
+import styles from './App.module.css'
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -25,8 +29,8 @@ const myStyle = {color: "aqua"}
 
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className={styles.App}>
+      <header className={styles.AppHeader}>
         <h1 style={myStyle}>Counter</h1>
       </header>
       <Counter inc={increaseCount} dec={decreaseCount} reset={resetCount} count= {count}/>
