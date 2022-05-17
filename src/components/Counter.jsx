@@ -1,26 +1,24 @@
-import { Component } from "react";
+import propTypes from 'prop-types'
 
-class Counter extends Component {
-  constructor() {
-    super();
+const Counter = ({inc,dec,reset,count}) => {
 
-    this.state = {
-      name: " hamed",
-    };
-  }
+  return(
 
-  changeName = () => {
-    this.setState({ name: "Leyla" });
-  };
-  render() {
-    return (
       <div>
-        <p>My Counter</p>
-        <p>{this.state.name}</p>
-        <button onClick={this.changeName}>Change name</button>
+        <h1 style={{color: count ===0? 'red' : 'green'}}>{count}</h1>
+        <button onClick={inc}>+</button>
+        <button style={{backgroundColor: count === 0 ? 'red' : 'teal'}} onClick={dec} disabled={count === 0}>-</button>
+        <br/>
+        <button onClick={reset}>Reset</button>
       </div>
-    );
-  }
+  )
 }
 
+
+Counter.propTypes = {
+    inc:propTypes.func,
+    dec:propTypes.func,
+    reset:propTypes.func,
+    count: propTypes.number
+}
 export default Counter;

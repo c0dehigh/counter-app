@@ -5,7 +5,7 @@ import Counter from "./components/Counter";
 import "./App.css";
 
 const App = () => {
-  const [count, setCount] = useState(5);
+  const [count, setCount] = useState(0);
 
   const increaseCount = () => {
     setCount(count + 1);
@@ -19,12 +19,17 @@ const App = () => {
     setCount(0);
   };
 
+
+const myStyle = {color: "aqua"}
+
+
+
   return (
     <div className="App">
-      <header>
-        <h1>Counter</h1>
+      <header className="App-header">
+        <h1 style={myStyle}>Counter</h1>
       </header>
-      <Counter />
+      <Counter inc={increaseCount} dec={decreaseCount} reset={resetCount} count= {count}/>
     </div>
   );
 };
