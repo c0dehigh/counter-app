@@ -15,6 +15,8 @@ const Counter = ({inc,dec,reset,count}) => {
 }
 
 
+// check props type
+
 Counter.propTypes = {
     inc:propTypes.func,
     dec:propTypes.func,
